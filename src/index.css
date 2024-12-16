@@ -83,6 +83,8 @@ main {
 }
 
 .ingredient-container {
+  width: 80%;
+  margin: 20px auto;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -112,6 +114,8 @@ ul.ingredients-list > li {
 }
 
 .get-recipe-container {
+  width: 80%;
+  margin: 100px auto; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -148,4 +152,10 @@ ul.ingredients-list > li {
 
 .get-recipe-container button:hover {
   background: #c05643;
+}
+
+
+#apiSection{
+  width: 70%;
+  margin: 100px auto ;
 }
