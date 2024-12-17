@@ -21,7 +21,7 @@ const IngredientsList = (props) => {
                 <h3>Ready for a recepie?</h3>
                 <p>Generate a recepie from your list of ingredients.</p>
               </div>
-              <button onClick={props.toggleRecepie}>Get a recepie</button>
+              <button onClick={props.getRecepie}>Get a recepie</button>
             </div>
           )}
         </section>

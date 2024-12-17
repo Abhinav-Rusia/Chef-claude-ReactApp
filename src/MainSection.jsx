@@ -1,12 +1,13 @@
 import React from "react";
 import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientsList from "./IngredientsList";
+import { getRecipeFromMistral } from "../ai";
 
 
 export default function MainSection() {
   const [ingredients, setIngredients] = React.useState([]);
 
-  const [recepieShown , setRecepieShown] = React.useState(false)
+  const [recepie , setRecepie] = React.useState(false)
 
   function addIngredient(event) {
     event.preventDefault();
@@ -18,8 +19,10 @@ export default function MainSection() {
     }
   }
 
-  function toggleRecepie(){
-    setRecepieShown((prevState)=> !prevState)
+ async function getRecepie(){
+  const recepieMarkdown = await getRecipeFromMistral(ingredients)
+  setRecepie(recepieMarkdown);
+  
 }
 
   return (
@@ -35,11 +38,11 @@ export default function MainSection() {
         <button type="submit">Add ingredient</button>
       </form>
       {ingredients.length > 0 && <IngredientsList
-      toggleRecepie = {toggleRecepie}
+      getRecepie = {getRecepie}
       ingredients = {ingredients}
       />}
 
-      {recepieShown ? <ClaudeRecipe/> : null }
+      {recepie ? <ClaudeRecipe recepie = {recepie} /> : null }
     </main>
   );
 }
