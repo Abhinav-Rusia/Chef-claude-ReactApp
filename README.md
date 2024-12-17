@@ -1,8 +1,7 @@
 🌟 Project Overview-
 
 
-What This Project Does
-This project is a Chef Claude Recipe Generator built using React. It allows users to input a list of ingredients, and with the help of Chef Claude's API, it generates a delicious recipe based on the provided ingredients.
+This project is a Chef Claude Recipe Generator built using React. It allows users to input a list of ingredients, and with the help of Hugging Face's API, it generates a delicious recipe based on the provided ingredients.
 
 The key features include:
 
