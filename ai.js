@@ -13,6 +13,7 @@ You are an assistant that receives a list of ingredients that a user has and sug
 ` 
 
 
+
 const hf = new HfInference(apiKey)
 
 export async function getRecipeFromMistral(ingredientsArr) {
